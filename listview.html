@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand</title>
+    <link type="img/png" sizes="16x16" rel="icon" href="icons8-shop-32.png">
+    <link rel="stylesheet" href="listviewstyle.css"> 
+</head>
+<body>
+    <header class="header container">
+        <a href="baitaplon_main.html" class="header-brand">
+            <img src="icons8-shop-32.png" alt="logo" width="32" height="32">
+            <span>Brand</span>
+        </a>
+        <form class="search-form">
+            <input type="search" id="search" name="search" placeholder="Search">
+            <select>
+                <option>All category</option>
+                <option>...</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+
+        <nav class="user-menu">
+            <ul>
+                <li><a href="BTL_Profile_login.html">Profile</a></li>
+                <li><a href="BTL_messger.html">Messger</a></li>
+                <li><a href="BTL_Orders.html">Orders</a></li>
+                <li><a href="BTL_naptien.html">Deposit money</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="menu-btn">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-label="Mở menu">
+                <p class="nav-toggle-bar">☰</p>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#">All category</a></li>
+                <li><a href="#">Hot offers</a></li>
+                <li><a href="#">Gift boxes</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="language-form">
+                <select>
+                    <option>English, USD</option>
+                    <option>VietNam</option>
+                </select>
+            </form>
+            <form class="ship-form">
+                <select>
+                    <option>Ship to USA</option>
+                    <option>...</option>
+                </select>
+            </form>
+        </nav>
+    </div>
+
+    <script>
+        // Lấy phần tử nút toggle và menu
+        const toggleButton = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        // Thêm sự kiện 'click' cho nút toggle
+        toggleButton.addEventListener('click', function() {
+            // 1. Hiển thị hoặc ẩn menu
+            navMenu.classList.toggle('nav-menu-active');
+            
+            // 2. Kích hoạt animation X cho nút
+            toggleButton.classList.toggle('nav-toggle-active');
+        });
+    </script>
+</body>
+</html>

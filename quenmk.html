@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên mật khẩu - Brand</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="icons8-shop-32.png">
+    <link rel="stylesheet" href="quenmk.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="header-brand">
+            <img src="icons8-shop-32.png" alt="logo">
+            <span>Brand</span>
+        </a>
+    </header>
+    <div class="ForgotPassword-container">
+        <h2>Quên mật khẩu</h2>
+
+        <form id="ForgotPassword-form">
+            <div class="form-group">
+                <label for="username">Tài khoản:</label>
+                <input type="email" id="username" name="username" placeholder="Nhập tài khoản của bạn" required>
+            </div>
+            <div class="form-group">
+                <label for="otp">Mã xác minh:</label>
+                <input type="text" id="otp" name="otp" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+                    placeholder="Nhập mã xác minh" required>
+            </div>
+
+            <button type="submit">Đăng nhập</button>
+            <p class="register-link">Bạn chưa có tài khoản? <a href="register.html">Đăng kí</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

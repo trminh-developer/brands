@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand</title>
+  <link rel="icon" type="img/png" href="icons8-shop-32.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-700">
+
+  <!-- Header trên cùng -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Brand logo -->
+      <div class="flex items-center gap-4">
+        <img src="logo1.png" alt="logo1" class="w-12 h-12 object-contain" />
+        <img src="logo2.png" alt="logo2" class="w-12 h-12 object-contain" />
+        <img src="logo3.png" alt="logo3" class="w-12 h-12 object-contain" />
+      </div>
+
+      <!-- Setting menu (click) -->
+      <nav class="relative">
+        <button id="settingBtn" class="hover:text-blue-500 font-medium flex items-center gap-1">
+          ⚙️ Setting
+        </button>
+        <ul id="settingMenu" class="hidden absolute right-0 mt-2 w-56 bg-white border rounded-lg shadow-lg p-2 text-sm">
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Ngôn ngữ</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Hỗ trợ</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Chăm sóc khách hàng</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Giao diện sáng / tối</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Đổi mật khẩu</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Thông tin trang web</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Nội dung chính -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-6">Xin chào 👋</h1>
+    <p class="mb-4">
+      Đây là trang web demo với Brand (logo đều nhau) + Setting menu dạng **click mở/đóng**.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-600 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+      <p class="text-sm">© 2025 Trang Web Demo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script mở/đóng menu -->
+    <script>
+        const btn = document.getElementById("settingBtn");
+        const menu = document.getElementById("settingMenu");
+
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+
+        // Ấn ngoài menu thì đóng lại
+        document.addEventListener("click", (e) => {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+          }
+        });
+    </script>
+
+</body>
+
+</html>

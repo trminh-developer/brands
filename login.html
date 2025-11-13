@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Brand</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="icons8-shop-32.png">
+    <link rel="stylesheet" href="style_login.css">
+</head>
+
+<body>
+    <header>
+        <a href="baitaplon_main.html" class="header-brand">
+            <img src="icons8-shop-32.png" alt="logo">
+            <span>Brand</span>
+        </a>
+    </header>
+
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Tài khoản:</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tài khoản của bạn" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật Khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu của bạn" required>
+            </div>
+            <div class="form-group">
+                <a href="quenmk.html">Quên mật khẩu?</a>
+            </div>
+
+            <button type="submit"><a href="login-main.html">Đăng nhập</a></button>
+            <p class="register-link">Bạn chưa có tài khoản? <a href="register.html">Đăng kí</a></p>
+        </form>
+    </div>
+
+    <script>
+                document.getElementById("login-form").addEventListener("submit", function (event) {
+            
+            // Ngăn form gửi đi và tải lại trang
+            event.preventDefault();
+
+            // --- DANH SÁCH CÁC TÀI KHOẢN HỢP LỆ ---
+            const validAccounts = [
+            { username: "trminhdev", password: "minh0353380551" },
+            { username: "conmemay", password: "minh1234567899" },
+            { username: "admin", password: "minh1234560" },
+            ];
+            // ----------------------------------------
+
+            // Lấy giá trị mà người dùng nhập từ các trường input
+            const usernameInput = document.getElementById("username").value;
+            const passwordInput = document.getElementById("password").value;
+
+            // Dùng hàm .find() để tìm xem có tài khoản nào khớp không
+            const foundUser = validAccounts.find(account => {
+                return account.username === usernameInput && account.password === passwordInput;
+            });
+
+            // Nếu "foundUser" không rỗng (nghĩa là tìm thấy)
+            if (foundUser) {
+                
+                // --- Đăng nhập thành công ---
+                alert("Đăng nhập thành công! Đang chuyển hướng bạn...");
+                
+                // Chuyển hướng đến trang chính
+                window.location.href = "login-main.html";
+
+            } else {
+                
+                // --- Đăng nhập thất bại ---
+                alert("Tài khoản hoặc mật khẩu không chính xác.");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+        /* --- Header Styles --- */
+        .header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 20px;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .header-brand img {
+            margin-right: 10px;
+            width: 40px; /* Increased size */
+            height: 40px;
+        }
+
+/* --- Cài đặt chung --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* --- Container chính của trang thanh toán --- */
+.checkout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 22px;
+    color: #343a40;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* --- Cột Thông tin khách hàng --- */
+.customer-info {
+    flex: 6; /* Chiếm 6 phần */
+    padding: 40px;
+    border-right: 1px solid #e9ecef;
+}
+
+.info-form .form-group {
+    margin-bottom: 20px;
+}
+
+.info-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #495057;
+}
+
+.info-form input,
+.info-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Quan trọng */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.info-form input:focus,
+.info-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các input */
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* --- Phương thức thanh toán --- */
+.payment-methods .payment-option {
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.payment-methods .payment-option:has(input:checked) {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.payment-methods input[type="radio"] {
+    margin-right: 12px;
+}
+.payment-methods label i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+/* --- Cột Tóm tắt đơn hàng --- */
+.order-summary {
+    flex: 4; /* Chiếm 4 phần */
+    padding: 40px;
+    background-color: #f8f9fa;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.summary-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.summary-item .item-info {
+    flex-grow: 1;
+}
+
+.summary-item .item-info p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.summary-item .item-price {
+    font-weight: 600;
+}
+
+.summary-total {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.total-line.final-total p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #28a745, #218838);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background: linear-gradient(90deg, #218838, #1e7e34);
+}
+
+.secure-note {
+    text-align: center;
+    margin-top: 15px;
+    color: #6c757d;
+    font-size: 14px;
+}
+.secure-note i {
+    color: #28a745;
+}
