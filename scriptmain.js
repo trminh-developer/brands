@@ -1,16 +1,3 @@
-// Lấy phần tử nút toggle và menu
-const toggleButton = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-
-// Thêm sự kiện 'click' cho nút toggle
-toggleButton.addEventListener('click', function () {
-    // 1. Hiển thị hoặc ẩn menu
-    navMenu.classList.toggle('nav-menu-active');
-
-    // 2. Kích hoạt animation X cho nút
-    toggleButton.classList.toggle('nav-toggle-active');
-});
-
 // --- 1. THAY ĐỔI NGÀY GIỜ KẾT THÚC Ở ĐÂY ---
 // Ví dụ: Đặt ngày 31 tháng 12 năm 2025, lúc 23:59:59
 const countDownDate = new Date("Dec 1, 2025 23:59:59").getTime();
@@ -110,4 +97,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+});
+// 1. Lấy nút button và menu
+const toggleBtn = document.getElementById('toggle-btn');
+const menu = document.getElementById('menu');
+
+// 2. Thêm sự kiện click
+toggleBtn.addEventListener('click', function () {
+    // Hàm toggle: Nếu có class 'active' thì xóa, chưa có thì thêm
+    menu.classList.toggle('active');
+});
+
+// (Tùy chọn) Bấm ra ngoài menu thì tự đóng lại
+document.addEventListener('click', function (event) {
+    // Nếu click không trúng button và không trúng menu
+    if (!toggleBtn.contains(event.target) && !menu.contains(event.target)) {
+        menu.classList.remove('active');
+    }
 });

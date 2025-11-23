@@ -4,7 +4,6 @@ body {
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-    
     align-items: center;
     justify-content: center;
     width: 1440px;
@@ -107,14 +106,16 @@ a {
 }
 .user-menu ul li a {
     font-weight: bold;
-    color: #333; /* Thêm màu cơ bản */
+    color: #333;
     text-decoration: none;
 }
 .user-menu ul li a:hover {
     color: #2563eb;
 }
+
 .menubtn {
-    width: 1180px;
+    width: 90%;
+    max-width: 1180px;
     transform: scale(1.1);
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
@@ -128,6 +129,7 @@ a {
     justify-content: space-between; 
     align-items: center; 
     position: relative;
+    border-radius: 15px;
 }
 
 .nav-toggle {
@@ -165,7 +167,13 @@ a {
     color: black;
     text-decoration: none;
     padding: 14px 20px;
-    border-bottom: 1px solid white; 
+    border-bottom: 1px solid white;
+    transition: all 0.2s;
+}
+
+.nav-menu.active {
+    display: block;
+    animation: menu 0.3s ease-in-out;
 }
 
 .nav-menu a:hover {
@@ -175,32 +183,25 @@ a {
     box-shadow: 2px 2px 8px aqua;
 }
 
-.language-form {
-    margin-right: 0 15px;
-    padding: 15px;
-    list-style-type: none;
-    background-color: none;
-    border-radius: 8px;
-    gap: 20px;
+.controls-container {
+    display: flex;
+    gap: 10px;
 }
 
-
-.language-form:hover {
-    border-radius: 8px;
+.language-form select, .ship-form select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
-.ship-form {
-    margin-right: 0 15px;
-    padding: 15px;
-    list-style-type: none;
-    background-color: none;
-    border-radius: 8px;
-    gap: 20px;
-}
-
-
-.ship-form:hover {
-    border-radius: 8px;
+@keyframes menu {
+    from {
+        opacity: 0; transform: translateY(-10px);
+    }
+    to {
+        opacity: 1; transform: translateY(0);
+    }
 }
 
 .thongbao {
