@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,118 +8,121 @@
     <link rel="stylesheet" href="style_thanhtoantien.css">
     <title>Brand</title>
 </head>
+
 <body>
-    <header>
+    <header class="header container">
         <a href="index.html" class="header-brand">
-            <img src="icons8-shop-32.png" alt="logo" width="32" height="32">
+            <img src="icons8-shop-32.png" alt="logo">
             <span>Brand</span>
         </a>
-        </header>
-<div class="checkout-container">
-    <div class="customer-info">
-        <h2 class="section-title">Thông Tin Giao Hàng</h2>
-        <form class="info-form">
-            <div class="form-group">
-                <label for="name">Họ và Tên</label>
-                <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Nhập email">
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Số Điện Thoại</label>
-                <input type="tel" id="phone" name="phone" placeholder="Nhập só điện thoại" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Địa Chỉ</label>
-                <input type="text" id="address" name="address" placeholder="Số nhà, tên đường, phường/xã" required>
-            </div>
-            
-            <div class="form-row">
-                 <div class="form-group">
-                    <label for="city">Tỉnh / Thành phố</label>
-                    <input type="text" id="city" name="city" placeholder="City/Province" required>
-                </div>
+    </header>
+    <div class="checkout-container">
+        <div class="customer-info">
+            <h2 class="section-title">Thông Tin Giao Hàng</h2>
+            <form class="info-form">
                 <div class="form-group">
-                    <label for="district">Quận / Huyện</label>
-                    <input type="text" id="district" name="district" placeholder="select quận/xã" required>
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập só điện thoại" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Địa Chỉ</label>
+                    <input type="text" id="address" name="address" placeholder="Số nhà, tên đường, phường/xã" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Tỉnh / Thành phố</label>
+                        <input type="text" id="city" name="city" placeholder="City/Province" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="district">Quận / Huyện</label>
+                        <input type="text" id="district" name="district" placeholder="select quận/xã" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Ghi Chú</label>
+                    <textarea id="notes" name="notes" rows="5"
+                        placeholder="Ghi chú thêm về đơn hàng (tùy chọn)"></textarea>
+                </div>
+            </form>
+
+            <h2 class="section-title">Phương Thức Thanh Toán</h2>
+            <div class="payment-methods">
+                <div class="payment-option">
+                    <input type="radio" id="cod" name="payment" value="cod" checked>
+                    <label for="cod">
+                        <i class="fas fa-truck"></i> Thanh toán khi nhận hàng (COD)
+                    </label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="bank" name="payment" value="bank">
+                    <label for="bank">
+                        <i class="fas fa-university"></i> Chuyển khoản ngân hàng
+                    </label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="momo" name="payment" value="momo">
+                    <label for="momo">
+                        <i class="fas fa-wallet"></i> Ví điện tử MoMo
+                    </label>
                 </div>
             </div>
-           
-            <div class="form-group">
-                <label for="notes">Ghi Chú</label>
-                <textarea id="notes" name="notes" rows="5" placeholder="Ghi chú thêm về đơn hàng (tùy chọn)"></textarea>
-            </div>
-        </form>
+        </div>
 
-        <h2 class="section-title">Phương Thức Thanh Toán</h2>
-        <div class="payment-methods">
-            <div class="payment-option">
-                <input type="radio" id="cod" name="payment" value="cod" checked>
-                <label for="cod">
-                    <i class="fas fa-truck"></i> Thanh toán khi nhận hàng (COD)
-                </label>
+        <div class="order-summary">
+            <h2 class="section-title">Đơn Hàng</h2>
+            <div class="summary-item">
+                <!-- <img src="ip17promax.jpg" alt="Sản phẩm 1"> -->
+                <div class="item-info">
+                    <p>iPhone 17 ProMax</p>
+                    <p>Số lượng: 1</p>
+                </div>
+                <p class="item-price">68.000.000₫</p>
             </div>
-            <div class="payment-option">
-                <input type="radio" id="bank" name="payment" value="bank">
-                <label for="bank">
-                    <i class="fas fa-university"></i> Chuyển khoản ngân hàng
-                </label>
+            <div class="summary-item">
+                <!-- <img src="#" alt="Sản phẩm 2"> -->
+                <div class="item-info">
+                    <p>Apple Watch Series 10</p>
+                    <p>Số lượng: 1</p>
+                </div>
+                <p class="item-price">10.590.000₫</p>
             </div>
-             <div class="payment-option">
-                <input type="radio" id="momo" name="payment" value="momo">
-                <label for="momo">
-                    <i class="fas fa-wallet"></i> Ví điện tử MoMo
-                </label>
+
+            <div class="summary-total">
+                <div class="total-line">
+                    <p>Tạm tính:</p>
+                    <p>78.590.000₫</p>
+                </div>
+                <div class="total-line">
+                    <p>Phí vận chuyển:</p>
+                    <p>200.000đ</p>
+                </div>
+                <div class="total-line final-total">
+                    <p>Tổng cộng:</p>
+                    <p>78.790.000₫</p>
+                </div>
             </div>
+
+            <button class="checkout-button">
+                <i class="fas fa-lock"></i> ĐẶT HÀNG NGAY
+            </button>
+            <p class="secure-note">
+                <i class="fas fa-shield-alt"></i> Thông tin của bạn được bảo mật tuyệt đối.
+            </p>
         </div>
     </div>
-
-    <div class="order-summary">
-        <h2 class="section-title">Đơn Hàng</h2>
-        <div class="summary-item">
-            <img src="ip17promax.jpg" alt="Sản phẩm 1">
-            <div class="item-info">
-                <p>iPhone 17 ProMax</p>
-                <p>Số lượng: 1</p>
-            </div>
-            <p class="item-price">68.000.000₫</p>
-        </div>
-        <div class="summary-item">
-            <img src="apple-watch-s10-den-tb-650x650.png" alt="Sản phẩm 2">
-            <div class="item-info">
-                <p>Apple Watch Series 10</p>
-                <p>Số lượng: 1</p>
-            </div>
-            <p class="item-price">10.590.000₫</p>
-        </div>
-
-        <div class="summary-total">
-            <div class="total-line">
-                <p>Tạm tính:</p>
-                <p>78.590.000₫</p>
-            </div>
-            <div class="total-line">
-                <p>Phí vận chuyển:</p>
-                <p>200.000đ</p>
-            </div>
-            <div class="total-line final-total">
-                <p>Tổng cộng:</p>
-                <p>78.790.000₫</p>
-            </div>
-        </div>
-
-        <button class="checkout-button">
-            <i class="fas fa-lock"></i> ĐẶT HÀNG NGAY
-        </button>
-        <p class="secure-note">
-            <i class="fas fa-shield-alt"></i> Thông tin của bạn được bảo mật tuyệt đối.
-        </p>
-    </div>
-</div>
 </body>
+
 </html>

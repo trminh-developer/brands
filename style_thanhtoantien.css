@@ -1,36 +1,55 @@
-        /* --- Header Styles --- */
-        .header {
-            background-color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            gap: 20px;
-        }
-
-        .header-brand {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #2563eb;
-        }
-
-        .header-brand img {
-            margin-right: 10px;
-            width: 40px; /* Increased size */
-            height: 40px;
-        }
-
 /* --- Cài đặt chung --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 40px 20px;
     color: #333;
+}
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1800px;
+    width: 1440px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* --- Header Styles --- */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.header-brand img {
+    margin-right: 10px;
+    width: 40px; /* Increased size */
+    height: 40px;
 }
 
 /* --- Container chính của trang thanh toán --- */
