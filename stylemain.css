@@ -320,7 +320,7 @@ a {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    height: 200px;
+    height: 230px;
 }
 
 .user-icon img {
@@ -363,6 +363,7 @@ a {
 .promo-box {
     border-radius: 5px;
     padding: 20px;
+    margin-top: 50px;
     font-size: 16px;
     color: white;
     font-weight: 600;
@@ -370,12 +371,13 @@ a {
 }
 
 .promo-orange {
-    margin-top: 30px;
+    margin-top: auto;
     background-color: #f37f00;
 }
 
 .promo-teal {
     background-color: #70c9a9;
+    margin-top: auto;
 }
 .user-actions {
     display: flex;

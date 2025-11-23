@@ -385,7 +385,7 @@ summary::-webkit-details-marker {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    height: 200px;
+    height: 230px;
 }
 
 .user-icon img {
@@ -427,6 +427,7 @@ summary::-webkit-details-marker {
 .promo-box {
     border-radius: 5px;
     padding: 20px;
+    margin-top: 50px;
     font-size: 16px;
     color: white;
     font-weight: 600;
@@ -434,11 +435,12 @@ summary::-webkit-details-marker {
 }
 
 .promo-orange {
-    margin-top: 30px;
+    margin-top: auto;
     background-color: #f37f00;
 }
 
 .promo-teal {
+    margin-top: auto;
     background-color: #70c9a9;
 }
 .user-actions {
