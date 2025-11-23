@@ -238,6 +238,7 @@ summary::-webkit-details-marker {
     padding: 14px 20px;
     border-bottom: 1px solid white;
     transition: all 0.2s;
+    font-weight: 600;
 }
 
 .nav-menu.active {
@@ -391,9 +392,8 @@ summary::-webkit-details-marker {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin: -7px;
+    margin: 2px;
     padding: auto;
-    cursor: pointer;
 }
 
 .login-box p {
@@ -465,8 +465,7 @@ summary::-webkit-details-marker {
     line-height: 48px;
     border-radius: 50%;
     margin: 0 auto 10px;
-    color: #0d6efd;
-    content: "👤"; 
+    color: #0d6efd; 
     display: block;
 }
 
@@ -596,6 +595,7 @@ summary::-webkit-details-marker {
     text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 .sale-card:hover {
     transform: translateY(-5px);
@@ -657,6 +657,7 @@ summary::-webkit-details-marker {
     border-radius: 8px 0 0 8px;
     overflow: hidden;
     transition: background-color 0.3s ease;
+
 }
 
 .left-aside .title {
@@ -768,6 +769,7 @@ summary::-webkit-details-marker {
     border-radius: 8px;
     box-shadow: 2px 2px 8px aqua;
     transform: translateY(-3px);
+    cursor: pointer;
 }
 
 .item:nth-child(5n), .item:nth-child(9) {

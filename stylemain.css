@@ -54,6 +54,7 @@ a {
     position: relative;
     z-index: 1000;
     overflow: visible;
+    font-weight: 600;
 }
 
 .header-brand {
@@ -172,6 +173,7 @@ a {
     padding: 14px 20px;
     border-bottom: 1px solid white;
     transition: all 0.2s;
+    font-weight: 600;
 }
 
 .nav-menu.active {
@@ -1113,12 +1115,7 @@ footer {
     }
 }
 /* --- Mobile --- */
-/* =========================================
-   MOBILE & TABLET RESPONSIVE (Màn hình nhỏ)
-   ========================================= */
 @media screen and (max-width: 1200px) {
-
-    /* 1. RESET KHUNG GIAO DIỆN (Tràn viền, bỏ lề thừa) */
     .container, 
     .thongbao, 
     .main-content, 
@@ -1129,38 +1126,35 @@ footer {
         margin: 0 !important;
         padding: 10px !important;
         max-width: 100% !important;
-        transform: none !important; /* Tắt phóng to */
+        transform: none !important;
         box-sizing: border-box !important;
     }
 
     /* 2. HEADER (Menu trên cùng) */
     .header {
         height: auto !important;
-        flex-direction: column; /* Xếp dọc */
+        flex-direction: column;
         gap: 10px;
         align-items: center;
     }
     .search-form {
-        width: 100%; /* Thanh tìm kiếm dài hết màn hình */
+        width: 100%;
     }
-    /* Ẩn bớt các menu phụ nếu quá rối */
     .user-menu ul { gap: 10px; font-size: 12px; }
-
-    /* 3. PHẦN THÔNG BÁO CHÍNH (Banner + Sidebar) */
     .thongbao {
-        flex-direction: column; /* Xếp chồng lên nhau */
+        flex-direction: column;
     }
     .sidebar, .user-actions {
-        display: none !important; /* Ẩn cột trái và phải cho gọn */
+        display: none !important;
     }
     .main-banner {
         width: 100% !important;
-        height: 180px; /* Banner thấp lại */
+        height: 180px;
         background-size: cover;
         margin-bottom: 10px;
     }
 
-    /* 4. PHẦN DEALS (Đếm ngược + Sản phẩm to) - CHỈNH NHỎ LẠI */
+    /* 4. PHẦN DEALS */
     .sale-grid {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -1169,10 +1163,10 @@ footer {
     }
     /* Hộp đồng hồ đếm ngược */
     .box-countdown {
-        width: 100% !important; /* Bắt buộc chiếm hết 1 dòng ngang trên cùng */
+        width: 100% !important;
         height: auto !important;
         display: flex !important;
-        flex-direction: column !important; /* Xếp chữ lên trên, đồng hồ xuống dưới */
+        flex-direction: column !important;
         align-items: center !important;
         border-bottom: 1px solid #eee;
         margin-bottom: 15px !important;
@@ -1182,7 +1176,7 @@ footer {
     .box-time { justify-content: center; gap: 5px; }
     /* Thẻ sản phẩm trong phần Deals (Chia 2 cột) */
     .sale-card {
-        width: calc(50% - 4px) !important; /* Chia đôi màn hình */
+        width: calc(50% - 4px) !important;
         display: flex !important;
         flex-direction: column;
         align-items: center;
