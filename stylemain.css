@@ -1,13 +1,18 @@
 /* --- General Styles --- */
 body {
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Bỏ padding body để tránh bị thanh cuộn thừa */
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-    align-items: center;
-    justify-content: center;
-    width: 1440px;
-    height: 3571px;
+    width: 100%; /* Đổi từ 1440px thành 100% */
+    height: auto; /* Để chiều cao tự động theo nội dung */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 * {
@@ -46,7 +51,11 @@ a {
     flex-wrap: wrap; 
     gap: 20px;
     transform: scale(1.1);
+    position: relative;
+    z-index: 1000;
+    overflow: visible;
 }
+
 .header-brand {
     display: flex;
     align-items: center;
@@ -97,20 +106,14 @@ a {
     border-radius: 0 8px 8px 0;
     box-shadow: 6px 6px 12px rgb(139, 241, 255);
 }
-.user-menu ul {
-    list-style: none;
+
+ .user-menu ul {
+    list-style: none !important;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 25px;
-}
-.user-menu ul li a {
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-.user-menu ul li a:hover {
-    color: #2563eb;
+    align-items: center;
+    gap: 15px;
 }
 
 .menubtn {
@@ -206,15 +209,17 @@ a {
 
 .thongbao {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
     width: 1180px;
-    height: 400px;
-    margin: 0 100px;
+    height: auto;
+    margin: 0 auto;
     gap: 20px;
     align-items: flex-start;
     background-color: #f8f9fa;
     transform: scale(1.1);
-}
+    box-sizing: border-box;
+ }
 
 .sidebar {
     background-color: #f8f9fa;
@@ -313,10 +318,16 @@ a {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    height: 200px;
 }
 
-.user-icon {
-    font-size: 32px;
+.user-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: -7px;
+    padding: auto;
+    cursor: pointer;
 }
 
 .login-box p {
@@ -357,6 +368,7 @@ a {
 }
 
 .promo-orange {
+    margin-top: 30px;
     background-color: #f37f00;
 }
 
@@ -1099,4 +1111,153 @@ footer {
     .nav-menu a {
         border-bottom: none;
     }
+}
+/* --- Mobile --- */
+/* =========================================
+   MOBILE & TABLET RESPONSIVE (Màn hình nhỏ)
+   ========================================= */
+@media screen and (max-width: 1200px) {
+
+    /* 1. RESET KHUNG GIAO DIỆN (Tràn viền, bỏ lề thừa) */
+    .container, 
+    .thongbao, 
+    .main-content, 
+    .block-item-group, 
+    .section-recommend,
+    .request-quote-section {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        max-width: 100% !important;
+        transform: none !important; /* Tắt phóng to */
+        box-sizing: border-box !important;
+    }
+
+    /* 2. HEADER (Menu trên cùng) */
+    .header {
+        height: auto !important;
+        flex-direction: column; /* Xếp dọc */
+        gap: 10px;
+        align-items: center;
+    }
+    .search-form {
+        width: 100%; /* Thanh tìm kiếm dài hết màn hình */
+    }
+    /* Ẩn bớt các menu phụ nếu quá rối */
+    .user-menu ul { gap: 10px; font-size: 12px; }
+
+    /* 3. PHẦN THÔNG BÁO CHÍNH (Banner + Sidebar) */
+    .thongbao {
+        flex-direction: column; /* Xếp chồng lên nhau */
+    }
+    .sidebar, .user-actions {
+        display: none !important; /* Ẩn cột trái và phải cho gọn */
+    }
+    .main-banner {
+        width: 100% !important;
+        height: 180px; /* Banner thấp lại */
+        background-size: cover;
+        margin-bottom: 10px;
+    }
+
+    /* 4. PHẦN DEALS (Đếm ngược + Sản phẩm to) - CHỈNH NHỎ LẠI */
+    .sale-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        border: 1px solid #eee;
+    }
+    /* Hộp đồng hồ đếm ngược */
+    .box-countdown {
+        width: 100% !important; /* Bắt buộc chiếm hết 1 dòng ngang trên cùng */
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important; /* Xếp chữ lên trên, đồng hồ xuống dưới */
+        align-items: center !important;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    .box-deals-offers { width: 100%; text-align: center; margin-bottom: 10px; }
+    .box-time { justify-content: center; gap: 5px; }
+    /* Thẻ sản phẩm trong phần Deals (Chia 2 cột) */
+    .sale-card {
+        width: calc(50% - 4px) !important; /* Chia đôi màn hình */
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px !important;
+        border: 1px solid #f9f9f9;
+        box-shadow: none !important;
+    }
+    .sale-card img {
+        width: 70px !important; /* Ảnh nhỏ lại */
+        height: 70px !important;
+        margin-bottom: 5px !important;
+    }
+    .sale-card h3 { font-size: 13px !important; text-align: center; }
+
+    /* 5. PHẦN BLOCK ITEM (Danh mục Home/Consumer...) */
+    .block-item-group {
+        display: flex !important;
+        flex-direction: column !important; /* Xếp dọc từ trên xuống */
+        background: #fff !important;
+        border: none !important;
+    }
+    
+    /* Thanh tiêu đề danh mục (Màu xanh/vàng bên trái cũ) */
+    .left-aside, .left-aside2 {
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px !important;
+        background-color: #f0f2f5 !important; /* Đổi thành nền xám nhẹ */
+        margin-bottom: 0 !important;
+    }
+    /* ẨN ẢNH TRANG TRÍ TO (Nguyên nhân gây vỡ giao diện) */
+    .left-aside img, .left-aside2 img, .btn-source-now {
+        display: none !important; 
+    }
+    .left-aside .title, .left-aside2 .title {
+        color: #333 !important;
+        font-size: 18px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    /* Các ô sản phẩm nhỏ trong danh mục này */
+    .item {
+        width: 100% !important; /* Nằm ngang full màn hình */
+        display: flex !important; /* Để ảnh và chữ nằm ngang */
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px !important;
+        border-bottom: 1px solid #eee !important;
+        border-right: none !important;
+    }
+    .item img {
+        width: 60px !important;
+        height: 60px !important;
+        margin-right: 15px;
+        margin-bottom: 0 !important;
+    }
+    .item p { margin: 0 !important; text-align: left !important; }
+
+    /* 6. LƯỚI SẢN PHẨM CUỐI TRANG (RECOMMENDED) */
+    .recommend-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 cột */
+        gap: 10px;
+    }
+    .product-item {
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+    .product-item img { height: 120px !important; }
+
+    /* 7. FOOTER VÀ FORM */
+    .footer-container { display: block; text-align: center; }
+    .footer-col { margin-bottom: 30px; }
+    .request-quote-section { background-image: url('form_section.png'); background-color: #237CFF; }
 }
